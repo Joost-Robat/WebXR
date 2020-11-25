@@ -1,0 +1,4 @@
+les 1:
+we hebben ontdekt wie we in groepjes zitten en we hebben een gemaakt aan de wireframe.
+les 2:
+wireframe afgemaakt en klein begin aan html en css.
