@@ -1,6 +1,20 @@
-div {
-    width: 100%;
-    }
-    body {
-        background-color: rgb(243, 184, 118)
-    }
+body {
+    background-color: rgb(243, 184, 118)
+}
+.top-bar {
+    width: auto;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex; justify-content: space-between;
+}
+#lam-logo {
+    height: 100px;
+    width: auto;
+    padding-left: 10%;
+}
+#titel {
+    color: white;
+    font-size: 75px;
+    padding-left: 1%;
+    margin: 0 auto;
+}
