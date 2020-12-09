@@ -1,10 +1,10 @@
 body {
-    background-color: rgb(243, 184, 118)
+    background-color: rgb(22, 22, 22, 0.5)
 }
 .top-bar {
     width: auto;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(243, 184, 118, 0.5);
     display: flex; justify-content: space-between;
 }
 #lam-logo {
@@ -15,7 +15,14 @@ body {
 #titel {
     color: white;
     font-size: 75px;
-    padding-left: 1%;
+    padding-left: 20%;
     margin: 0 auto;
     font-family: sans-serif;
+}
+#middle {
+  background-image: url("https://cdn.discordapp.com/attachments/760048181588525076/785837030223380510/LAM_Interieur-1-Sjaak-Henselman-1024x690.png");
+  height: 690px;
+  width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
 }
