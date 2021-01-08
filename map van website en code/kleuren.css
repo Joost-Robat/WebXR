@@ -1,5 +1,6 @@
-body {
-    background-color: rgb(22, 22, 22, 0.5)
+html {
+  font-family: 'Quicksand', sans-serif;
+  background-color: rgb(22, 22, 22, 0.5);
 }
 .top-bar {
     width: auto;
@@ -15,14 +16,51 @@ body {
 #titel {
     color: white;
     font-size: 75px;
-    padding-left: 20%;
+    padding-left: 0%;
     margin: 0 auto;
-    font-family: sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
-#middle {
-  background-image: url("https://cdn.discordapp.com/attachments/760048181588525076/785837030223380510/LAM_Interieur-1-Sjaak-Henselman-1024x690.png");
+section {
+  background-image: url("background.png");
+  repeat: no-repeat;
   height: 690px;
   width: 1024px;
   margin-left: auto;
   margin-right: auto;
+  box-sizing: border-box;
+}
+#container0 {
+  display: flex;
+  width: 20%;
+  float: left;
+  height: 684px;
+}
+#background {
+  background-image: url("background.png");
+  repeat: no-repeat;
+  max-height: 63.8%;
+  max-width: 53.3%;
+  height: 690px;
+  width: 1024px;
+}
+#container1 {
+    display: flex;
+    width: 20%;
+    float: right;
+    height: 684px;
+}
+#bottom {
+  padding: 3px;
+  text-align: left;
+  float: left;
+  width: 30%
+}
+#vrWindow {
+  float: right;
+  width: 60%;
+  height: 
+}
+#clearFloat {
+  clear: both;
+  text-align:
 }

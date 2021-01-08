@@ -5,15 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LAM | Lisser Art Museum [De Virtuele Ervaring]</title>
     <link rel="stylesheet" href="kleuren.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
     <link rel="icon" href="https://www.lamlisse.nl/wp-content/uploads/2018/07/A-logo-bruin.png" type="image/x-icon">
+    <script src="library/aframe.js"></script>
+    <script src="library/ma-webxr.js" defer></script>
+    <script src="app.js" defer></script>
 </head>
 <body>
+  <main>
     <div class="top-bar" style="border: 3px solid black">
         <img src="Lam_logo.png" id="lam-logo">
         <p id="titel">De Virtuele Ervaring</p>
         <img src="hamburger.png" id="hamburger">
     </div>
-    <div id="middle">
+
+    <div id="container0" style="border: 3px solid black">
+      <h2 id="clearFloat">Informatie over de Virtuele Ervaring.<h2>
+      <br>
+      <h3 id="clearFloat">De virtuele ervaring van LAM; eindelijk beschikbaar!<h3>
     </div>
+    <div id="container1" style="border: 3px solid black">
+      <h2 id="clearFloat">Hoe optimalizeer ik de ervaring?</h2>
+      <br>
+      <h3 id="clearFloat">Een Google Cardboard of Google Daydream zou ideaal zijn voor de virtuele LAM ervaring, natuurlijk kan dit ook met een Oculus Quest 1/2 of met een ander overige virtuele headset, de enige eis is dat het toegang moet hebben naar het internet natuurlijk!</h3>
+    </div>
+    <section id="background">
+    </section>
+    <div id="bottom" style="border: 3px solid black">
+      <h2 id="clearFloat">De Virtuele Ervaring Wacht...</h2>
+      <br>
+      <h3 id="clearFloat">Hier komen later de instructies voor VR</h3>
+    </div>
+    <div id="vrWindow" style="border: 3px solid black">
+      <h2 id="clearFloat">Stap er in met uw eigen apparaat!</h2>
+      <a-scene background="color: white" embedded></a-scene>
+    </div>
+
+</main>
 </body>
 </html>
