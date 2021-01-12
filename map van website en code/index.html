@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="kleuren.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="icon" href="https://www.lamlisse.nl/wp-content/uploads/2018/07/A-logo-bruin.png" type="image/x-icon">
     <script src="library/aframe.js"></script>
     <script src="library/ma-webxr.js" defer></script>
-    <script src="app.js" defer></script>
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
 </head>
 <body>
   <main>
@@ -21,26 +22,81 @@
     </div>
 
     <div id="container0" style="border: 3px solid black">
-      <h2 id="clearFloat">Informatie over de Virtuele Ervaring.<h2>
+      <h2>Informatie over de Virtuele Ervaring.<h2>
       <br>
-      <h3 id="clearFloat">De virtuele ervaring van LAM; eindelijk beschikbaar!<h3>
+      <h3>De virtuele ervaring van LAM; eindelijk beschikbaar!<h3>
     </div>
     <div id="container1" style="border: 3px solid black">
-      <h2 id="clearFloat">Hoe optimalizeer ik de ervaring?</h2>
+      <h2>Hoe optimalizeer ik de ervaring?</h2>
       <br>
-      <h3 id="clearFloat">Een Google Cardboard of Google Daydream zou ideaal zijn voor de virtuele LAM ervaring, natuurlijk kan dit ook met een Oculus Quest 1/2 of met een ander overige virtuele headset, de enige eis is dat het toegang moet hebben naar het internet natuurlijk!</h3>
+      <h3>Een Google Cardboard of Google Daydream zou ideaal zijn voor de virtuele LAM ervaring, natuurlijk kan dit ook met een Oculus Quest 1/2 of met een ander overige virtuele headset, de enige eis is dat het toegang moet hebben naar het internet natuurlijk!</h3>
     </div>
     <section id="background">
     </section>
     <div id="bottom" style="border: 3px solid black">
-      <h2 id="clearFloat">De Virtuele Ervaring Wacht...</h2>
+      <h2>De Virtuele Ervaring Wacht...</h2>
       <br>
-      <h3 id="clearFloat">Hier komen later de instructies voor VR</h3>
+      <h3>Pak uw gekozen apparaat voor de Virtuele Ervaring van het LAM, en druk vervolgens op de knop rechts waar pop staat; VR.</h3>
     </div>
     <div id="vrWindow" style="border: 3px solid black">
-      <h2 id="clearFloat">Stap er in met uw eigen apparaat!</h2>
-      <a-scene background="color: white" embedded></a-scene>
+      <h2>Stap er in met uw eigen apparaat!</h2>
+      <a-scene embedded>
+       <a-assets>
+           <img id="360-Panorama" src="BrightSky.jpg">
+           <img id="floor" src="Vloer_Lam.jpg">
+           <img id="floor-ding" src="Vloer_Lam_2.jpg">
+       </a-assets>
+       <a-sky src="#360-Panorama"
+              radius="25"
+              side="double">
+       </a-sky>
+       <a-plane material="src: #floor-ding;
+                          repeat: 30 30;
+                          normal-map: #floor-ding;
+                          normal-texture-repeat: 30 30"
+                 rotation="-90 0 0"
+                 scale="60 60 2"
+                 position="0 -1.8 0">
+       </a-plane>
+       <a-entity camera look-controls wasd-controls="acceleration:100" position="0 0 0">
+             <a-cursor raycaster="objects: .ui"></a-cursor>
+       </a-entity>
+       <a-box color="#AC1509"
+              position="0 -0.4 -6"
+              scale="0.6 0.6 0.6"
+              animation__spin="dur:7500;easing:linear;to: 360 720 180;loop:-1;property:rotation;class:ui"
+              animation__start="property: material; from: #AC1509; to: #BD3525;
+                               startEvents: mouseenter; dur:500; easing: linear"
+              animation__stop="property: material; from: #BD3525; to: #AC1509;
+                               startEvents: mouseleave; dur:500; easing: linear"
+              event-set__scale="_target: #Textwall1; _event: click;
+                               animation.property: scale;
+                               animation.to: 3 2.5 0.01;
+                               animation.easing: easeInOutBack"
+              event-set__position="_target: #Textwall1; _event: click;
+                                  animation.property: position;
+                                  animation.to: 0 2.5 -6">
+       </a-box>
+       <a-box scale="3 0.05 3"
+              position="0 -1.8125 -6"
+              color="#BAEAFF">
+       </a-box>
+       <a-box id="Textwall1"
+              color="BA52EF"
+              position="0 -0.4 -6"
+              scale="0.3 0.3 0.3">
+       </a-box>
+   </a-scene>
+    <div style="border: solid black 3px">
+
     </div>
+    <div style="border: solid black 3px">
+
+    </div>
+    <div style="border: solid black 3px">
+
+    </div>
+</div>
 
 </main>
 </body>

@@ -58,9 +58,10 @@ section {
 #vrWindow {
   float: right;
   width: 60%;
-  height: 
+  height: 60%;
 }
-#clearFloat {
-  clear: both;
-  text-align:
+a-scene {
+  float: right;
+  width: 60%;
+  height: 60%;
 }
