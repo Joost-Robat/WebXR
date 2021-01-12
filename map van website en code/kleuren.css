@@ -1,6 +1,8 @@
 html {
   font-family: 'Quicksand', sans-serif;
-  background-color: rgb(22, 22, 22, 0.5);
+}
+body {
+  background-color: rgba(22, 22, 22, 0.5)
 }
 .top-bar {
     width: auto;
@@ -20,20 +22,14 @@ html {
     margin: 0 auto;
     font-family: 'Quicksand', sans-serif;
 }
-section {
-  background-image: url("background.png");
-  repeat: no-repeat;
-  height: 690px;
-  width: 1024px;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
-}
 #container0 {
   display: flex;
   width: 20%;
   float: left;
-  height: 684px;
+  height: 690px;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+
 }
 #background {
   background-image: url("background.png");
@@ -42,26 +38,43 @@ section {
   max-width: 53.3%;
   height: 690px;
   width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
 }
 #container1 {
     display: flex;
     width: 20%;
     float: right;
-    height: 684px;
+    height: 690px;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
 }
 #bottom {
   padding: 3px;
   text-align: left;
   float: left;
-  width: 30%
+  width: 30%;
+  height: 550px;
 }
 #vrWindow {
   float: right;
   width: 60%;
-  height: 60%;
+  height: 550px;
 }
 a-scene {
   float: right;
   width: 60%;
   height: 60%;
+}
+#onder {
+  width: 10%;
+  height: 10%
+  display: flex;
+}
+#onder:hover {
+  background-color: black;
+  color: white;
+}
+#txt {
+  padding: 15px;
 }
