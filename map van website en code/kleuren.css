@@ -2,7 +2,10 @@ html {
   font-family: 'Quicksand', sans-serif;
 }
 body {
-  background-color: rgba(22, 22, 22, 0.5)
+  background-color: rgba(22, 22, 22, 0.5);
+}
+strong {
+  color: rgba(0, 0, 0, 0);
 }
 .top-bar {
     width: auto;
@@ -50,7 +53,8 @@ body {
     border-right: 3px solid black;
 }
 #bottom {
-  padding: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
   text-align: left;
   float: left;
   width: 30%;
@@ -67,12 +71,16 @@ a-scene {
   height: 60%;
 }
 #onder {
-  width: 10%;
-  height: 10%
-  display: flex;
+  height: 200px;
+  width: 200px;
+  margin-left: 20%;
+  text-align: center;
 }
 #onder:hover {
   background-color: black;
+  color: white;
+}
+#arrow:hover {
   color: white;
 }
 #txt {
