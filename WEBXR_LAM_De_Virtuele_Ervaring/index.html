@@ -39,52 +39,74 @@
     </div>
     <div id="vrWindow" style="border: 3px solid black">
       <a-scene embedded>
-       <a-assets>
-           <img id="360-Panorama" src="BrightSky.jpg">
-           <img id="floor" src="Vloer_Lam.jpg">
-           <img id="floor-ding" src="Vloer_Lam_2.jpg">
-       </a-assets>
-       <a-sky src="#360-Panorama"
-              radius="25"
-              side="double">
-       </a-sky>
-       <a-plane material="src: #floor-ding;
-                          repeat: 30 30;
-                          normal-map: #floor-ding;
-                          normal-texture-repeat: 30 30"
-                 rotation="-90 0 0"
-                 scale="60 60 2"
-                 position="0 -1.8 0">
-       </a-plane>
-       <a-entity camera look-controls wasd-controls="acceleration:100" position="0 0 0">
-             <a-cursor raycaster="objects: .ui"></a-cursor>
-       </a-entity>
-       <a-box color="#AC1509"
-              position="0 -0.4 -6"
-              scale="0.6 0.6 0.6"
-              animation__spin="dur:7500;easing:linear;to: 360 720 180;loop:-1;property:rotation;class:ui"
-              animation__start="property: material; from: #AC1509; to: #BD3525;
-                               startEvents: mouseenter; dur:500; easing: linear"
-              animation__stop="property: material; from: #BD3525; to: #AC1509;
-                               startEvents: mouseleave; dur:500; easing: linear"
-              event-set__scale="_target: #Textwall1; _event: click;
-                               animation.property: scale;
-                               animation.to: 3 2.5 0.01;
-                               animation.easing: easeInOutBack"
-              event-set__position="_target: #Textwall1; _event: click;
-                                  animation.property: position;
-                                  animation.to: 0 2.5 -6">
-       </a-box>
-       <a-box scale="3 0.05 3"
-              position="0 -1.8125 -6"
-              color="#BAEAFF">
-       </a-box>
-       <a-box id="Textwall1"
-              color="BA52EF"
-              position="0 -0.4 -6"
-              scale="0.3 0.3 0.3">
-       </a-box>
-   </a-scene>
+        <a-assets>
+             <img id="360-Panorama" src="BrightSky.jpg">
+             <img id="floor" src="Vloer Lam.jpg">
+             <img id="floor-ding" src="Vloer Lam 2.jpg">
+             <img id="Lam" src="logoLam.png">
+             <img id="Kunst1" src="Lisse-043.jpg">
+             <img id="Kunst2" src="FolkertdeJong.jpg">
+             <img id="Kunst3" src="JegensTevens.jpg">
+         </a-assets>
+         <a-image src="#Lam" width="5" height="3" position="0 3 -7"></a-image>
+         <a-image src="#Kunst1" width="3.5" height="3" position="5 0.5 -5" rotation="0 135 0"></a-image>
+         <a-image src="#Kunst2" width="3.5" height="3" position="-5 0.5 -5" rotation="0 -135 0"></a-image>
+         <a-image src="#Kunst3" width="3.5" height="3" position="-6.5 0.5 0" rotation="0 -90 0"></a-image>
+         <a-box color="#000000" position="0 -1.8 -7.095" scale="9 0.1 13" rotation="90 0 0"></a-box>
+         <a-sky src="#360-Panorama"
+                radius="25"
+                side="double"
+                position="0 -1.8 0">
+         </a-sky>
+         <a-plane material="color: #floor;
+                            src: #floor-ding;
+                            repeat: 30 30;
+                            normal-map: #floor-ding;
+                            normal-texture-repeat: 30 30"
+                   position="0 -1.8 0"
+                   rotation="-90 0 0"
+                   scale="60 60 2">
+         </a-plane>
+         <a-entity camera look-controls wasd-controls="acceleration:150" position="0 0 7">
+           <a-entity geometry="primitive: plane; height: 0.02; width: 0.02" position="0 0 -1"
+                     material="color: gray; opacity: 0.8"
+                     fov="90"></a-entity>
+         </a-entity>
+         <a-box color="#AC1509"
+                position="0 -0.6 -6"
+                scale="0.6 0.6 0.6"
+                animation__spin="dur:7500;easing:linear;to: 360 720 180;loop:-1;property:rotation;class:ui"
+                animation__start="property: material; from: #AC1509; to: #BD3525;
+                                 startEvents: mouseenter; dur:500; easing: linear"
+                animation__stop="property: material; from: #BD3525; to: #AC1509;
+                                 startEvents: mouseleave; dur:500; easing: linear"
+                event__scale="_target: #Textwall1; _event: click;
+                                 animation.property: scale;
+                                 animation.to: 3 0.7 0.01;
+                                 animation.easing: easeInOutBack"
+                event__position="_target: #Textwall1; _event: click;
+                                    animation.property: position;
+                                    animation.to: 0 0.7 -6">
+         </a-box>
+         <a-box scale="3 0.05 3"
+                position="0 -1.8 -6"
+                color="#BAEAFF">
+         </a-box>
+         <a-box id="Textwall1"
+                color="BA52EF"
+                position="0 -0.55 -6"
+                scale="0.3 0.3 0.3">
+         </a-box>
+         <a-text
+           value="Welkom in het L.A.M. museum,
+            dit museum bevat internationale topstukken die wij op een interessante manier aan jou presenteren, met onze persoonlijke aanpak laten wij zien wat wij denken bij jou past!"
+           position="-2 1 -7">
+         </a-text>
+         <a-text value="Artist: Folkert de Jong. naam van het kunstwerk: Weird Science" position="-7 2.5 -3" rotation="0 45 0"></a-text>
+         <a-text value="Artist: Folkert de Jong. naam van het kunstwerk: De Nihilist-tabel(II)" position="3 2.5 -7" rotation="0 -45 0"></a-text>
+         <a-text value="Artist: ?. naam van kunstwerk: Kunst gemaakt van eten" position="-6.5 2.5 2.5" rotation="0 90 0"></a-text>
+         </a-entity>
+     </a-scene>
  </div>
     <div id="onder" style="border: 3px solid black; margin-top: 35%"><a href="https://www.lamlisse.nl/" target="_blank">
       <img style="max-width: 100%; margin-top: 60px; max-height: 100%" src="Lam_logo.png" alt="Het LAM Logo"></a>
@@ -96,9 +118,9 @@
     </div>
     <div id="onder" style="border: solid black 3px; margin-left: 70%; margin-top: -11%">
       <h3 style="font-size: 30px; margin-top: 20%">
-      <strong id="arrow">🡦 🡣 🡣 🡣 🡧</strong><br>
+      <strong id="arrow">🡦</strong><strong id="arrow"> 🡣</strong><strong id="arrow"> 🡣</strong><strong id="arrow"> 🡣</strong><strong id="arrow"> 🡧</strong><br>
       <strong id="arrow">🡢</strong><a href="https://www.lamlisse.nl/tickets/" target="_blank"> Tickets </a><strong id="arrow">🡠</strong><br>
-      <strong id="arrow">🡥 🡡 🡡 🡡 🡤</strong>
+      <strong id="arrow">🡥</strong><strong id="arrow"> 🡡</strong><strong id="arrow"> 🡡</strong><strong id="arrow"> 🡡</strong><strong id="arrow"> 🡤</strong>
       </h3>
     </div>
 
