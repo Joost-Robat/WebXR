@@ -54,49 +54,49 @@
          <a-image src="#Kunst3" width="3.5" height="3" position="-6.5 0.5 0" rotation="0 -90 0"></a-image>
          <a-box color="#000000" position="0 -1.8 -7.095" scale="9 0.1 13" rotation="90 0 0"></a-box>
          <a-sky src="#360-Panorama"
-                radius="25"
-                side="double"
-                position="0 -1.8 0">
-         </a-sky>
-         <a-plane material="color: #floor;
-                            src: #floor-ding;
-                            repeat: 30 30;
-                            normal-map: #floor-ding;
-                            normal-texture-repeat: 30 30"
-                   position="0 -1.8 0"
-                   rotation="-90 0 0"
-                   scale="60 60 2">
-         </a-plane>
-         <a-entity camera look-controls wasd-controls="acceleration:150" position="0 0 7">
-           <a-entity geometry="primitive: plane; height: 0.02; width: 0.02" position="0 0 -1"
-                     material="color: gray; opacity: 0.8"
-                     fov="90"></a-entity>
-         </a-entity>
-         <a-box color="#AC1509"
-                position="0 -0.6 -6"
-                scale="0.6 0.6 0.6"
-                animation__spin="dur:7500;easing:linear;to: 360 720 180;loop:-1;property:rotation;class:ui"
-                animation__start="property: material; from: #AC1509; to: #BD3525;
-                                 startEvents: mouseenter; dur:500; easing: linear"
-                animation__stop="property: material; from: #BD3525; to: #AC1509;
-                                 startEvents: mouseleave; dur:500; easing: linear"
-                event__scale="_target: #Textwall1; _event: click;
-                                 animation.property: scale;
-                                 animation.to: 3 0.7 0.01;
-                                 animation.easing: easeInOutBack"
-                event__position="_target: #Textwall1; _event: click;
-                                    animation.property: position;
-                                    animation.to: 0 0.7 -6">
-         </a-box>
-         <a-box scale="3 0.05 3"
-                position="0 -1.8 -6"
-                color="#BAEAFF">
-         </a-box>
-         <a-box id="Textwall1"
-                color="BA52EF"
-                position="0 -0.55 -6"
-                scale="0.3 0.3 0.3">
-         </a-box>
+               radius="25"
+               side="double"
+               position="0 -1.8 0">
+        </a-sky>
+        <a-plane material="color: #floor;
+                           src: #floor-ding;
+                           repeat: 30 30;
+                           normal-map: #floor-ding;
+                           normal-texture-repeat: 30 30"
+                  position="0 -1.8 0"
+                  rotation="-90 0 0"
+                  scale="60 60 2">
+        </a-plane>
+        <a-entity camera look-controls wasd-controls="acceleration:150" position="0 0 7">
+          <a-entity geometry="primitive: plane; height: 0.02; width: 0.02" position="0 0 -1"
+                    material="color: gray; opacity: 0.8"
+                    fov="90"></a-entity>
+        </a-entity>
+        <a-box color="#AC1509"
+               position="0 -0.6 -6"
+               scale="0.6 0.6 0.6"
+               animation__spin="dur:7500;easing:linear;to: 360 720 180;loop:-1;property:rotation;class:ui"
+               animation__start="property: material; from: #AC1509; to: #BD3525;
+                                startEvents: mouseenter; dur:500; easing: linear"
+               animation__stop="property: material; from: #BD3525; to: #AC1509;
+                                startEvents: mouseleave; dur:500; easing: linear"
+               event__scale="_target: #Textwall1; _event: click;
+                                animation.property: scale;
+                                animation.to: 3 0.7 0.01;
+                                animation.easing: easeInOutBack"
+               event__position="_target: #Textwall1; _event: click;
+                                   animation.property: position;
+                                   animation.to: 0 0.7 -6">
+        </a-box>
+        <a-box scale="3 0.05 3"
+               position="0 -1.8 -6"
+               color="#BAEAFF">
+        </a-box>
+        <a-box id="Textwall1"
+               color="BA52EF"
+               position="0 -0.55 -6"
+               scale="0.3 0.3 0.3">
+        </a-box>
          <a-text
            value="Welkom in het L.A.M. museum,
             dit museum bevat internationale topstukken die wij op een interessante manier aan jou presenteren, met onze persoonlijke aanpak laten wij zien wat wij denken bij jou past!"
@@ -104,7 +104,7 @@
          </a-text>
          <a-text value="Artist: Folkert de Jong. naam van het kunstwerk: Weird Science." position="-7 2.5 -3" rotation="0 45 0"></a-text>
          <a-text value="Artist: Folkert de Jong. naam van het kunstwerk: De Nihilist-tabel(II)." position="3 2.5 -7" rotation="0 -45 0"></a-text>
-         <a-text value="Naam van kunstwerk: Eten dat zich presenteert als kunst." position="-6.5 2.5 2.5" rotation="0 90 0"></a-text>
+         <a-text value="Naam van kunstwerk: Eten dat zich presenteert als kunst." position="-7 2.5 2.5" rotation="0 90 0"></a-text>
          </a-entity>
      </a-scene>
  </div>
