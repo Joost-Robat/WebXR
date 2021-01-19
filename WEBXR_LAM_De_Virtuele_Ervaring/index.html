@@ -1,17 +1,154 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAM | Lisser Art Museum [De Virtuele Ervaring]</title>
     <link rel="stylesheet" href="kleuren.css">
-    <title></title>
-  </head>
-  <body style="display: flex; background-color: rgba(243, 184, 118, 1);">
-    <div id="linking_dutch"><a href="index_nederlands.html">
-      <img src="images/dutch.png" alt="Nederlandse vlag" style="height: 100%; width: 100%">
-    </a></div>
-    <img src="images/Lam_logo.png" alt="Lisser Art Museum Logo" style="margin-top: 16%; padding-bottom: 1%">
-    <div id="linking_english" style="display: flex;"><a style="display: flex;" href="index_english.html">
-      <img src="images/english.png" alt="English flag">
-    </a></div>
-  </body>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://www.lamlisse.nl/wp-content/uploads/2018/07/A-logo-bruin.png" type="image/x-icon">
+    <script src="library/aframe.js"></script>
+    <script src="library/ma-webxr.js" defer></script>
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+</head>
+<body>
+  <main>
+    <div class="top-bar" style="border: 3px solid black">
+        <img src="images/Lam_logo.png" id="lam-logo">
+        <p id="titel">De Virtuele Ervaring</p>
+                <a href="index_english.html"><img src="images/english.png" style="height: 100px; width:auto; padding-right: 2%;"></a>
+    </div>
+    <div id="container0" style="float: left;">
+      <h2 id="txt" style="text-align: center; display: flex; clear: both;"><a style="font-size: 40px">Informatie over de Virtuele Ervaring</a></h2>
+      <p id="txt" style="font-size: 25px; clear: both;">De virtuele ervaring van LAM; eindelijk beschikbaar!<br>Pak je kans nu, pak uw headset of telefoon en zie onze kunst vanaf uw eigen huis!<br>Het Lisser Art Museum wenst u een fijne virtuele ervaring!</p>
+    </div>
+    <div id="container1" style="float: right;">
+      <h2 id="txt" style="text-align: center; display: flex; clear: both;"><a style="font-size: 40px">Hoe optimalizeer ik de ervaring?</a></h2>
+      <p id="txt" style="font-size: 25px; clear: both;">Een Google Cardboard of Google Daydream zou ideaal zijn voor de virtuele LAM ervaring, natuurlijk kan dit ook met een Oculus Quest 1/2 of met een ander overige virtuele headset, de enige eis is dat het toegang moet hebben naar het internet natuurlijk!</p>
+    </div>
+    <section id="background">
+    </section>
+    <div id="bottom" style="border: 3px solid black">
+      <h2 id="txt" style="font-size: 40px">De Virtuele Ervaring Wacht...</h2>
+      <br>
+      <h3 id="txt" style="font-size: 30px">Pak uw gekozen apparaat voor de Virtuele Ervaring van het LAM, en druk vervolgens op de knop rechts waar pop staat; VR.</h3>
+    </div>
+    <div id="vrWindow" style="border: 3px solid black">
+      <a-scene embedded>
+        <a-assets>
+            <img id="360-Panorama" src="BrightSky.jpg">
+            <img id="floor" src="Vloer_Lam.jpg">
+            <img id="floor-ding" src="Vloer_Lam_2.jpg">
+            <img id="Lam" src="logoLam.png">
+            <img id="Kunst1" src="Lisse-043.jpg">
+            <img id="Kunst2" src="FolkertdeJong.jpg">
+            <img id="Kunst3" src="JegensTevens.jpg">
+            <img id="Kunst4" src="Art_LAM1.jpeg">
+        </a-assets>
+        <a-image src="#Lam" width="5" height="3" position="0 3 -7"></a-image>
+        <a-image src="#Kunst1" width="3.5" height="3" position="5 0.5 -5" rotation="0 135 0"></a-image>
+        <a-image src="#Kunst2" width="3.5" height="3" position="-5 0.5 -5" rotation="0 -135 0"></a-image>
+        <a-image src="#Kunst3" width="3.5" height="3" position="-7 0.5 0" rotation="0 -90 0"></a-image>
+        <a-image src="#Kunst4" width="3.5" height="3" position="7 0.5 0" rotation="0 -90 0"></a-image>
+        <a-box color="#000000" position="0 -1.8 -7.095" scale="6 0.1 13" rotation="90 0 0"></a-box>
+
+        <!--Border Kunst 1-->
+        <a-box color="FFFFFF" position="-7 0 1.8" scale="0.1 4 0.1"></a-box>
+        <a-box color="FFFFFF" position="-7 0 -1.8" scale="0.1 4 0.1"></a-box>
+        <a-box color="FFFFFF" position="-7 2 0" scale="0.1 3.7 0.1" rotation="90 0 0"></a-box>
+        <a-box color="FFFFFF" position="-7 -1 0" scale="0.1 3.7 0.1" rotation="90 0 0"></a-box>
+
+        <!--Border Kunst 2-->
+        <a-box color="FFFFFF" position="-6.25 0 -3.75" scale="0.1 4 0.1" rotation="0 45 0"></a-box>
+        <a-box color="FFFFFF" position="-3.75 0 -6.25" scale="0.1 4 0.1" rotation="0 45 0"></a-box>
+        <a-box color="FFFFFF" position="-5 2 -5" scale="0.1 3.64 0.1" rotation="90 135 0"></a-box>
+        <a-box color="FFFFFF" position="-5 -1 -5" scale="0.1 3.64 0.1" rotation="90 135 0"></a-box>
+
+        <!--Border Kunst 3-->
+        <a-box color="FFFFFF" position="6.25 0 -3.75" scale="0.1 4 0.1" rotation="0 135 0"></a-box>
+        <a-box color="FFFFFF" position="3.75 0 -6.25" scale="0.1 4 0.1" rotation="0 135 0"></a-box>
+        <a-box color="FFFFFF" position="5 2 -5" scale="0.1 3.64 0.1" rotation="90 45 0"></a-box>
+        <a-box color="FFFFFF" position="5 -1 -5" scale="0.1 3.64 0.1" rotation="90 45 0"></a-box>
+
+        <!--Border Kunst 4-->
+        <a-box color="FFFFFF" position="7 0 1.8" scale="0.1 4 0.1"></a-box>
+        <a-box color="FFFFFF" position="7 0 -1.8" scale="0.1 4 0.1"></a-box>
+        <a-box color="FFFFFF" position="7 2 0" scale="0.1 3.7 0.1" rotation="90 0 0"></a-box>
+        <a-box color="FFFFFF" position="7 -1 0" scale="0.1 3.7 0.1" rotation="90 0 0"></a-box>
+
+        <a-sky src="#360-Panorama"
+               radius="25"
+               side="double"
+               position="0 -1.8 0">
+        </a-sky>
+        <a-plane material="color: #floor;
+                           src: #floor-ding;
+                           repeat: 30 30;
+                           normal-map: #floor-ding;
+                           normal-texture-repeat: 30 30"
+                  position="0 -1.8 0"
+                  rotation="-90 0 0"
+                  scale="60 60 2">
+        </a-plane>
+        <a-entity camera look-controls wasd-controls="acceleration:150" position="0 0 7">
+          <a-entity geometry="primitive: plane; height: 0.02; width: 0.02" position="0 0 -1"
+                    material="color: gray; opacity: 0.8"
+                    fov="90"></a-entity>
+        </a-entity>
+        <a-box color="#AC1509"
+               position="0 -0.6 -6"
+               scale="0.6 0.6 0.6"
+               animation__spin="dur:7500;easing:linear;to: 360 720 180;loop:-1;property:rotation;class:ui"
+               animation__start="property: material; from: #AC1509; to: #BD3525;
+                                startEvents: mouseenter; dur:500; easing: linear"
+               animation__stop="property: material; from: #BD3525; to: #AC1509;
+                                startEvents: mouseleave; dur:500; easing: linear"
+               event__scale="_target: #Textwall1; _event: click;
+                                animation.property: scale;
+                                animation.to: 3 0.7 0.01;
+                                animation.easing: easeInOutBack"
+               event__position="_target: #Textwall1; _event: click;
+                                   animation.property: position;
+                                   animation.to: 0 0.7 -6">
+        </a-box>
+        <a-box scale="3 0.05 3"
+               position="0 -1.8 -6"
+               color="#BAEAFF">
+        </a-box>
+        <a-box id="Textwall1"
+               color="BA52EF"
+               position="0 -0.55 -6"
+               scale="0.3 0.3 0.3">
+        </a-box>
+         <a-text
+           value="Welkom in het L.A.M. museum,
+            dit museum bevat internationale topstukken die wij op een interessante manier aan jou presenteren, met onze persoonlijke aanpak laten wij zien wat wij denken bij jou past!"
+           position="-2 0.8 -7">
+         </a-text>
+         <a-text value="Artist: Folkert de Jong. naam van het kunstwerk: Weird Science." position="-7 2.5 -3" rotation="0 45 0"></a-text>
+         <a-text value="Artist: Folkert de Jong. naam van het kunstwerk: De Nihilist-tabel(II)." position="3 2.5 -7" rotation="0 -45 0"></a-text>
+         <a-text value="Naam van kunstwerk: Eten dat zich presenteert als kunst." position="-7 2.5 2.5" rotation="0 90 0"></a-text>
+         <a-text value="Kunst van vrouw" position="7 2.5 -1" rotation="0 -90 0"></a-text>
+         </a-entity>
+     </a-scene>
+ </div>
+    <div id="onder" style="border: 3px solid black; margin-top: 35%"><a href="https://www.lamlisse.nl/" target="_blank">
+      <img style="max-width: 100%; margin-top: 60px; max-height: 100%" src="images/Lam_logo.png" alt="Het LAM Logo"></a>
+    </div>
+    <div id="onder" style="border: solid black 3px; margin-left: 45%; margin-top: -11%">
+      <h3 style="margin-top:30%">Gemaakt door:<br>
+        Joost Robat<br>
+        Guido van der Kort</h3>
+    </div>
+    <div id="onder" style="border: solid black 3px; margin-left: 70%; margin-top: -11%">
+      <h3 style="font-size: 30px; margin-top: 20%">
+      <strong id="arrow">🡦</strong><strong id="arrow"> 🡣</strong><strong id="arrow"> 🡣</strong><strong id="arrow"> 🡣</strong><strong id="arrow"> 🡧</strong><br>
+      <strong id="arrow">🡢</strong><a href="https://www.lamlisse.nl/tickets/" target="_blank"> Tickets </a><strong id="arrow">🡠</strong><br>
+      <strong id="arrow">🡥</strong><strong id="arrow"> 🡡</strong><strong id="arrow"> 🡡</strong><strong id="arrow"> 🡡</strong><strong id="arrow"> 🡤</strong>
+      </h3>
+    </div>
+
+</main>
+</body>
 </html>
